@@ -1,0 +1,31 @@
+PROBLEM 5
+Blockchain
+
+
+In this problem I have used-
+1. Link-List : List of blocks connected to each other through hash value of previous block
+2. Dictionary:To store all hash value of all the blocks created and its reference address.
+
+
+Algorithm:
+1. Initialise Blockchain with dictionary and last_block reference
+2. Append block at the end of the list :
+1. Create block .
+2. Set data, timestamp, previous hash.
+3. Calculate hash of new block using the data, timestamp and previous hash value.
+4. Add the block hash as key in dictionary and block reference as value.
+3. Print Blockchain
+1. untill hash code of current block is zero
+2. print data of current block
+3. get previous block from dictionary using its previous hash value
+4. repeat step 1
+
+
+Time Complexity Analysis:
+• Append: O(1)
+• Print BlockChain: O(n) where n is number of blocks in blockchain
+
+
+Space Complexity Analysis:
+• Space to store dictionary: O(n)
+• BlockChain: O(n)
